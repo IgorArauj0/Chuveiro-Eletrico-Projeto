@@ -1,38 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>🚿 Dashboard Arduino</title>
+  <title>Monitor Arduino</title>
   <script src="/socket.io/socket.io.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-    h1 {
-      color: #222;
-    }
-    #tempo {
-      font-size: 28px;
-      font-weight: bold;
-      color: green;
-    }
-  </style>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚿 Dashboard Arduino</h1>
-  <p>Tempo restante do banho:</p>
-  <div id="tempo">Aguardando dados...</div>
+  <div class="container">
+    <h1>Monitoramento em Tempo Real</h1>
+    <div class="dados">
+      <span><strong>Tempo:</strong> <span id="tempo">--</span></span>
+      <span><strong>Interações:</strong> <span id="interacoes">--</span></span>
+      <span><strong>Consumo:</strong> <span id="consumo">--</span></span>
+      
 
-  <script>
-    const socket = io();
-
-    socket.on("arduino-data", (data) => {
-      console.log("Dado recebido do Arduino:", data);
-
-      // Exibe direto o valor recebido do Arduino
-      document.getElementById("tempo").textContent = data + " min";
-    });
-  </script>
+    </div>
+  </div>
 </body>
 </html>

@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Monitor Arduino</title>
+  <!-- Carrega a biblioteca Socket.IO para comunicação em tempo real -->
   <script src="/socket.io/socket.io.js"></script>
+  <!-- Carrega o script responsável por receber os dados do servidor -->
   <script defer src="script.js"></script>
+  <!-- Vincula o arquivo de estilos da interface -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Container principal da página -->
   <div class="container">
     <h1>Monitoramento em Tempo Real</h1>
+    <!-- Área que exibe as métricas recebidas do Arduino -->
     <div class="dados">
       <span><strong>Tempo:</strong> <span id="tempo">--</span></span>
       <span><strong>Interações:</strong> <span id="interacoes">--</span></span>
       <span><strong>Consumo:</strong> <span id="consumo">--</span></span>
-      
-
     </div>
   </div>
 </body>

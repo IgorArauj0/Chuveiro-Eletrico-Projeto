@@ -1,3 +1,4 @@
+/* Define o estilo base da página, incluindo fundo, fonte e centralização do conteúdo. */
 body {
   font-family: "Segoe UI", Roboto, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -10,6 +11,7 @@ body {
   height: 100vh;
 }
 
+/* Estiliza o painel principal onde as informações serão exibidas. */
 .container {
   background: rgba(20, 20, 20, 0.8);
   padding: 40px 60px;
@@ -21,6 +23,7 @@ body {
   backdrop-filter: blur(8px);
 }
 
+/* Define o visual do título principal da interface. */
 h1 {
   font-size: 3rem;
   margin-bottom: 30px;
@@ -28,12 +31,14 @@ h1 {
   text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
 }
 
+/* Organiza os campos de dados em uma coluna vertical. */
 .dados {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Estiliza cada linha de informação exibida na tela. */
 .dados span {
   font-size: 22px;
   background: rgba(0, 234, 255, 0.1);
@@ -43,16 +48,19 @@ h1 {
   text-shadow: 0 0 5px #00eaff;
 }
 
+/* Define uma cor específica para a métrica de tempo. */
 #tempo {
   color: #00ff7f;
   font-weight: bold;
 }
 
+/* Define uma cor específica para a métrica de interações. */
 #interacoes {
   color: #ffa500;
   font-weight: bold;
 }
 
+/* Define uma cor específica para a métrica de consumo. */
 #consumo {
   color: #ff4d4d;
   font-weight: bold;
